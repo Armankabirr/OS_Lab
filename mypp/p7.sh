@@ -6,3 +6,17 @@
 #!/usr/bin/env bash
 
 
+fun(){
+    if (( $1 >= 10 && $1 <= 20))
+    then 
+        num=$1
+    else
+        read -p "enter a number between 10 and 20 : " num
+    fi
+
+    echo "sleeping for $num sec"
+    sleep $num
+    echo "alive after $num sec"
+}
+
+fun "$1"

@@ -31,10 +31,9 @@ echo "Empty directories removed successfully."
 #rename file with numbers 
 directory="$1"
 prefix="$2"
-
 counter=1
 
-for file in "$directory"/*; do
+for file in "$directory"/*; do #Loops through every item inside the specified directory one by one
   new_name="$directory/${prefix}${counter}.txt"
   mv "$file" "$new_name"
   ((counter++))

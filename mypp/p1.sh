@@ -5,28 +5,49 @@
 
 #!/usr/bin/env bash
 
+
 sum=0
 
-fun_check(){
-    num=$1
-    local_sum=0
-    if (( num < 10 ))
-    then
-        read -p "Enter any number greater than 10:" num
-    fi
+fun() {
 
-    for ((i=0; i<=num; i+=2))
-    do  
-        if (( i <= num )) 
-        then
-            echo $i
-            local_sum=$(( local_sum + i ))
-        fi
-    done
-
-    sum=$local_sum
-
+  n=$1
+  if (( n <= 10 ))
+  then 
+    read -p "enter the number greater than 10 : " n
+  fi
+  for (( i=0 ; i<= n ; i+=2 ))
+  do
+    echo "num: $i"
+    sum=$(( sum + $i ))
+  done
 }
 
-fun_check "$1"
+fun "$1"
 echo "sum is $sum"
+
+
+# sum=0
+
+# fun_check(){
+#     num=$1
+#     local_sum=0
+#     if (( num < 10 ))
+#     then
+#         read -p "Enter any number greater than 10:" num
+#     fi
+
+#     for ((i=0; i<=num; i+=2))
+#     do  
+#         if (( i <= num )) 
+#         then
+#             echo $i
+#             local_sum=$(( local_sum + i ))
+#         fi
+#     done
+
+#     sum=$local_sum
+
+# }
+
+# fun_check "$1"
+# echo "sum is $sum"

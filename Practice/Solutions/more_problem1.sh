@@ -22,6 +22,6 @@ for file in "$@"; do
     elif [ -e "$file" ]; then
         echo "File $file is not a regular file"
     else
-        echo "File $file does not exist"
+         echo "File $file does not exist"
     fi
 done

@@ -8,7 +8,7 @@ for file in *; do
     fi
     # check if file name contains at least one digit
     if [[ "$file" =~ [0-9] ]]; then
-        # rm -f "$file"
+        rm -f "$file"
         echo "File $file deleted"
     fi
 done

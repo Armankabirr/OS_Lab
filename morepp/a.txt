@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+for file in *;do
+    if ! [ -f "$file" ]
+    then
+        continue
+    fi
+
+    if [[ "$file" =~ [0-9] ]]
+    then   
+        rm "$file"
+        echo "file delited"
+    fi
+done

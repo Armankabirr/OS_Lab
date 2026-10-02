@@ -1,0 +1,55 @@
+1) Implement two threads: one increments a shared counter from 0 to 3 and then sleeps, while the other decrements it from 3 to 0 and then sleeps, repeating cyclically.
+Output:
+0 1 2 3 2 1 0 1 2 3 2 1 0.....
+
+2) Design a program using three threads to print numbers 1, 2, 3 in strict sequence repeatedly. 
+Output:
+1 2 3 1 2 3 1 2 3 1 2 3.....
+
+3) Implement two threads: one thread continuously generates a random number and stores it in a shared variable. The second thread reads the generated number and adds it to a shared running sum.
+Output:
+Generated: 5
+Sum: 5
+Generated: 3
+Sum: 8
+Generated: 7
+Sum: 15
+
+4) Implement two threads that print numbers in sequence starting from 1. One thread prints numbers that are multiples of 3, and the other thread prints all remaining numbers.
+
+Output:
+1
+2
+3  (printed by Thread-1)
+4
+5
+6  (printed by Thread-1)
+7
+...
+
+5) Implement two threads that share a central sum variable. One thread randomly generates a number and adds it to the sum. When the sum exceeds a specified threshold, it waits until the second thread resets the sum to 0, after which it continues.
+
+Output:
+Generated: 2, Sum: 2
+Generated: 4, Sum: 6
+Generated: 10, Sum: 16
+Exceeds threshold 15
+Generated: 7, Sum: 7
+Generated: 10, Sum: 17
+Exceeds threshold 15
+...
+
+6) Implement three threads that run continuously. One thread generates a number X, another thread generates a number Y, and a third thread prints the sum X + Y after both values are generated. X and Y can be generated in any order. 
+
+Output:
+X: 5
+Y: 10
+Sum: 15
+Y: 7
+X: 1
+Sum: 8
+X: 2
+Y: 3
+Sum: 5
+...
+...
